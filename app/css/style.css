@@ -1,0 +1,318 @@
+html, body {
+    /* Universe fills all space */
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.orbits {
+    border: 1px dotted white;
+    border-radius: 50%;
+}
+
+.button-container {
+    top: 0px;
+    left: 0px;
+}
+
+.button-wrapper {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+    cursor: pointer;
+}
+
+.button-glow {
+    -moz-box-shadow: 0 0 30px #fff;
+    -webkit-box-shadow: 0 0 30px #fff;
+    box-shadow: 0px 0px 30px #fff;
+}
+
+.button {
+    height: 35px;
+    width: 35px;
+}
+
+.orbits {
+    border: 1px dotted white;
+    border-radius: 50%;
+}
+
+#sun {
+    /* Positioned absolute in the middle of the solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    width: auto;
+    /* Sets the orange border */ 
+    border-color: orange;
+    border-width: 3px;
+    border-style: solid;
+    /* Rounds the border */
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+    /* Adds the red glow */
+    box-shadow: 0 0 35px red;
+}
+
+#mercury {
+    /* Position mercury on start */
+    position: absolute;
+    top: 0px; 
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#mercury-orbit { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    -webkit-animation: spin-right 3s linear infinite;
+    -moz-animation: spin-right 3s linear infinite;
+    -ms-animation: spin-right 3s linear infinite;
+    -o-animation: spin-right 3s linear infinite;
+    animation: spin-right 3s linear infinite;
+}
+
+#venus {
+    /* Position venus on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#venus-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    /* Handles animation across browsers; 6s / revolution */
+    -webkit-animation: spin-right 6s linear infinite;
+    -moz-animation: spin-right 6s linear infinite;
+    -ms-animation: spin-right 6s linear infinite;
+    -o-animation: spin-right 6s linear infinite;
+    animation: spin-right 6s linear infinite;
+}
+
+#earth {
+    /* Position earth on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#earth-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    /* Handles animation across browsers; 10s / revolution */ 
+    -webkit-animation: spin-right 10s linear infinite;
+    -moz-animation: spin-right 10s linear infinite;
+    -ms-animation: spin-right 10s linear infinite;
+    -o-animation: spin-right 10s linear infinite;
+    animation: spin-right 10s linear infinite;
+}
+
+#moon {
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#moon-orbit {
+    /* Position orbit around earth */
+    position: relative;  
+
+    /* Handles animation across browsers; 2s / revolution */
+    -webkit-animation: spin-right 2s linear infinite;
+    -moz-animation: spin-right 2s linear infinite;
+    -ms-animation: spin-right 2s linear infinite;
+    -o-animation: spin-right 2s linear infinite;
+    animation: spin-right 2s linear infinite;
+}
+
+#mars {
+    /* Position mars on start */
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#mars-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 12s / revolution */
+    -webkit-animation: spin-right 12s linear infinite;
+    -moz-animation: spin-right 12s linear infinite;
+    -ms-animation: spin-right 12s linear infinite;
+    -o-animation: spin-right 12s linear infinite;
+    animation: spin-right 12s linear infinite;
+}
+
+#jupiter {
+    /* Position jupiter on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#jupiter-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 16s / revolution */
+    -webkit-animation: spin-right 16s linear infinite;
+    -moz-animation: spin-right 16s linear infinite;
+    -ms-animation: spin-right 16s linear infinite;
+    -o-animation: spin-right 16s linear infinite;
+    animation: spin-right 16s linear infinite;
+}
+
+#saturn {
+    /* Position saturn on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#saturn-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 18s / revolution */
+    -webkit-animation: spin-right 18s linear infinite;
+    -moz-animation: spin-right 18s linear infinite;
+    -ms-animation: spin-right 18s linear infinite;
+    -o-animation: spin-right 18s linear infinite;
+    animation: spin-right 18s linear infinite;
+}
+
+#uranus {
+    /* Position uranus on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#uranus-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 20s / revolution */
+    -webkit-animation: spin-right 20s linear infinite;
+    -moz-animation: spin-right 20s linear infinite;
+    -ms-animation: spin-right 20s linear infinite;
+    -o-animation: spin-right 20s linear infinite;
+    animation: spin-right 20s linear infinite;
+}
+
+#neptune {
+    /* Position neptune on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#neptune-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 22s / revolution */
+    -webkit-animation: spin-right 22s linear infinite;
+    -moz-animation: spin-right 22s linear infinite;
+    -ms-animation: spin-right 22s linear infinite;
+    -o-animation: spin-right 22s linear infinite;
+    animation: spin-right 22s linear infinite;
+}
+
+#pluto {
+    /* Position pluto on start */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+#pluto-orbit {
+    /* Position orbit in solar system */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Handles animation across browsers; 25s / revolution */
+    -webkit-animation: spin-right 25s linear infinite;
+    -moz-animation: spin-right 25s linear infinite;
+    -ms-animation: spin-right 25s linear infinite;
+    -o-animation: spin-right 25s linear infinite;
+    animation: spin-right 25s linear infinite;
+}
+
+/* http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+@-webkit-keyframes spin-right { /* Safari, Chrome */
+    100% {
+        /* Rotate 360, time set in individual planet markup */
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-right { /* IE10, Firefox, Opera */
+    100% {
+        /* Rotate 360, time set in individual planet markup */
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+
+    }
+}

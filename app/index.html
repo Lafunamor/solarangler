@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body ng-controller='ctrl'>
+        <div class="button-container">
+            <div class="button-wrapper" ng-class="chemClass ? 'button-glow' : ''">
+                <img class="button" src="img/chem-icon.png" ng-click="chemClass = !chemClass"/>
+            </div>
+            <div class="button-wrapper" ng-class="orbitClass ? 'button-glow' : ''">
+                <img class="button" src="img/orbit-icon.png" ng-click="orbitClass = !orbitClass"/>
+            </div>
+        </div>
+        <input type="text" ng-model="sun_image"/>
+        <img id="sun" ng-src="{{sun_image}}">
+        <div id="mercury-orbit" class="orbit">
+            <img id="mercury" ng-src="{{mercury_image}}" alt="Mercury" class="planet">
+        </div>
+        <div id="venus-orbit" class="orbit">
+            <img id="venus" ng-src="{{venus_image}}" alt="Venus" class="planet">
+        </div>
+        <div id="earth-orbit" class="orbit">  
+            <div id="moon-orbit" class="moon">
+                <img id="moon" ng-src="{{moon_image}}" alt="Moon">
+            </div>
+            <img id="earth" ng-src="{{earth_image}}" alt="Earth" class="planet">
+        </div>  
+        <div id="mars-orbit" class="orbit">
+            <img id="mars" ng-src="{{mars_image}}" alt="Mars" class="planet">
+        </div>
+        <div id="jupiter-orbit" class="orbit">
+            <img id="jupiter" ng-src="{{jupiter_image}}" alt="Jupiter" class="planet">
+        </div>
+        <div id="saturn-orbit" class="orbit">
+            <img id="saturn" ng-src="{{saturn_image}}" alt="Saturn" class="planet">
+        </div>
+        <div id="uranus-orbit" class="orbit">
+            <img id="uranus" ng-src="{{uranus_image}}" alt="Uranus" class="planet">
+        </div>
+        <div id="neptune-orbit" class="orbit">
+            <img id="neptune" ng-src="{{neptune_image}}" alt="Neptune" class="planet">
+        </div>
+        <div id="pluto-orbit" class="orbit">
+            <img id="pluto" ng-src="{{pluto_image}}" alt="Pluto" class="planet">
+        </div>
+ 
+        <script type="text/javascript">
+            
+            // Update solar system on window load and resize
+            $(window).ready(updateSolarSystem);
+            $(window).resize(updateSolarSystem);
+            var orbit_ratios = {
+                'mercury-orbit' : 1.60,
+                'venus-orbit'   : 1.95,
+                'earth-orbit'   : 2.85,
+                'mars-orbit'    : 3.70,
+                'jupiter-orbit' : 5.20,
+                'saturn-orbit'  : 6.65,
+                'uranus-orbit'  : 7.80,
+                'neptune-orbit' : 8.80,
+                'pluto-orbit'   : 9.80,
+            },
+            size_ratios = {
+                'mercury' : 0.08,
+                'venus'   : 0.10,
+                'earth'   : 0.28,
+                'mars'    : 0.25,
+                'jupiter' : 0.60,
+                'saturn'  : 0.55,
+                'uranus'  : 0.38,
+                'neptune' : 0.38,
+                'pluto'   : 0.05
+            }
+
+            function updateSolarSystem(){
+                // Update sun position
+                var sun_h = $('#sun').height();
+                $('#sun').css('margin-top', -(sun_h/2));
+                $('#sun').css('margin-left', -(sun_h/2));
+                // Update planet sizes in relation to sun's size
+                $('.planet').each(function(index){
+                    var val = sun_h * size_ratios[$(this).attr('id')];
+                    $(this).css('width', val);
+                    $(this).css('height', val);   
+                    // Center planet on orbit
+                    $(this).css('margin-top', -(val/2));
+                }); 
+                // Update planet orbits in relation to sun's size
+                $('.orbit').each(function(index){
+                    var val = sun_h * orbit_ratios[$(this).attr('id')]; 
+                    $(this).css('width', val);
+                    $(this).css('height', val);
+                    // Center orbit around sun
+                    $(this).css('margin-top', -(val/2));
+                    $(this).css('margin-left', -(val/2));
+                });
+                // Update moons size relative to earth
+                var earth_w = $('#earth').width();
+                var earth_h = $('#earth').height();
+                $('#moon').css('width', earth_w * 0.10);
+                $('#moon').css('height', earth_h * 0.10);
+                // Update moons-orbit
+                var mo_w = earth_w * 1.65;
+                var mo_h = earth_h * 1.65;
+                $('#moon-orbit').css('width', mo_w);
+                $('#moon-orbit').css('height', mo_h);
+                $('#moon-orbit').css('margin-top', earth_w * -0.85);
+                $('#moon-orbit').css('margin-left', (earth_w * 5.00));
+            }
+        </script>
+    </body>
+</html>
