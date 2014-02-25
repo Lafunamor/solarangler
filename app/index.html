@@ -18,21 +18,23 @@
     <body ng-controller='ctrl'>
         <a href="https://github.com/limbachjordan/solarangler" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
         <div class="button-container">
-            <div class="button-wrapper">
-                <div class="tooltips" data-toggle="tooltip" data-placement="bottom" title="Experiment">
-                    <img class="button" ng-src="{{exp_btn_src}}" ng-click="exp_click()" onclick="flip()"/>
-                </div>
-            </div>
             <table>
                 <tr>
-                    <td><span><b>jQuery | CSS3 | AngularJS</b></span></td>
-                </tr>
-                <tr>
-                    <td><span>Chrome, Safari, Firefox, IE10,11</span></td>
+                    <td>
+                        <div class="button-wrapper">
+                            <div class="tooltips" data-toggle="tooltip" data-placement="bottom" title="Experiment">
+                                <img class="button" ng-src="{{exp_btn_src}}" ng-click="exp_click()" onclick="flip()"/>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <br/><span><b>jQuery | CSS3 | AngularJS</b></span><br/>
+                        <span>Chrome, Safari, Firefox, IE10,11</span>
+                    </td>
                 </tr>
             </table>
         </div>
-        <div id="input-fields" style="opacity: 0">
+        <div id="input-fields">
             <table id="input-table">
                 <tr>
                     <td><label for="sun_img">Sun URI:</label></td>
