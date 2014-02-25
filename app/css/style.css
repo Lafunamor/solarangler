@@ -6,6 +6,60 @@ html, body {
     font-family: 'Oxygen', sans-serif;
 }
 
+#input-table {
+    margin-left: 25px;
+}
+
+label {
+    color: grey;
+    padding-right: 15px;
+    float: right;
+    font-size: 12px;
+}
+
+input {
+    background-color: #666666;
+    color: white;
+    border: 0px;
+    font-size: 11px;
+    width: 215px;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+span a {
+    font-size: 12px;
+}
+
+span {
+    font-family: Serif;
+    font-size: 12px;
+}
+
+.lower-right {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.lower-right-container {
+    text-align: center;
+    margin: 5px;
+    width: 250px;
+    height: 75px;
+}
+
+#social-div div {
+    display: inline-block;
+}
+
 .orbits {
     border: 1px dotted white;
     border-radius: 50%;
@@ -14,27 +68,24 @@ html, body {
 .button-container {
     top: 0px;
     left: 0px;
+    margin-left: 15px;
 }
 
 .button-wrapper {
     display: inline-block;
     padding: 5px;
     margin: 10px;
-    -webkit-border-radius: 50em;
-    -moz-border-radius: 50em;
-    border-radius: 50em;
     cursor: pointer;
 }
 
-.button-glow {
-    -moz-box-shadow: 0 0 30px #fff;
-    -webkit-box-shadow: 0 0 30px #fff;
-    box-shadow: 0px 0px 30px #fff;
+.button {
+    height: 28px;
+    width: 30px;
 }
 
-.button {
-    height: 35px;
-    width: 35px;
+#social-table {
+    margin-left: 5px;
+    margin-top: 3px;
 }
 
 .orbits {
@@ -129,24 +180,6 @@ html, body {
     -ms-animation: spin-right 10s linear infinite;
     -o-animation: spin-right 10s linear infinite;
     animation: spin-right 10s linear infinite;
-}
-
-#moon {
-    -webkit-border-radius: 50em;
-    -moz-border-radius: 50em;
-    border-radius: 50em;
-}
-
-#moon-orbit {
-    /* Position orbit around earth */
-    position: relative;  
-
-    /* Handles animation across browsers; 2s / revolution */
-    -webkit-animation: spin-right 2s linear infinite;
-    -moz-animation: spin-right 2s linear infinite;
-    -ms-animation: spin-right 2s linear infinite;
-    -o-animation: spin-right 2s linear infinite;
-    animation: spin-right 2s linear infinite;
 }
 
 #mars {
