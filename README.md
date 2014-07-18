@@ -1,7 +1,8 @@
 solarangler
 ===========
 
-Constructing the solar system using jQuery + CSS3 + AngularJS
+Constructing the solar system using jQuery + CSS3 + AngularJS<br/>
+http://solarangler.com
 
 Thank you to hin82 for the awesome angler art:
 http://hin82.deviantart.com/art/Angler-fish-217677215
